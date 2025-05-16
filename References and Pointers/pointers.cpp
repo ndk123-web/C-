@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+void arrPtr(int (&arr)[5]);
+
 int main()
 {
     // declare a string variable called food and assign it the value "pizza"
@@ -10,19 +12,19 @@ int main()
     std::string *ptr = &food;
 
     // print out the value of food (the string "pizza")
-    std::cout << food << "\n";  
+    std::cout << food << "\n";
 
     // print out the address of food in the stack
     std::cout << &food << "\n"; // this will print out an address in hexadecimal format
 
     // print out the address of ptr in the stack
-    std::cout << ptr << "\n";  
+    std::cout << ptr << "\n";
 
     // print out the address of ptr in the stack ( again, because ptr is a pointer and this is its address )
-    std::cout << &ptr << "\n"; 
+    std::cout << &ptr << "\n";
 
     // dereference the pointer ptr to get the value it points to (the string "pizza")
-    std::cout << *ptr << "\n"; 
+    std::cout << *ptr << "\n";
 
     // change the value of food using the pointer
     // this is like saying food = "Hamburgers";
@@ -35,5 +37,16 @@ int main()
     // print out the value that ptr points to (which is now "Hamburgers")
     std::cout << *ptr;
 
+    // array pointer
+    int arr[5] = {1, 2, 3, 4, 5};
+    arrPtr(arr);
+    std::cout << *arr << std::endl;
+
     return 0;
+}
+
+// pass by reference (aliasing)
+void arrPtr(int (&arr)[5])
+{
+    std::cout << *arr << std::endl;
 }
