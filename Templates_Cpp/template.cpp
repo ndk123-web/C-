@@ -5,6 +5,13 @@
 // Templates provide a way to define functions, classes, and data structures 
 // that can work with any data type.
 
+   /*
+Templates only work with the first block (class/function/struct) 
+    they are defined with, hence a single template cannot be shared 
+    across multiple functions without defining them separately.
+*/
+    
+
 /*
     Using 'typename' and 'class' in templates:
     - Both 'typename' and 'class' can be used to define a template.
@@ -20,10 +27,7 @@ T add(T a , T b){
 }
 
 /*
-    Templates only work with the first block (class/function/struct) 
-    they are defined with, hence a single template cannot be shared 
-    across multiple functions without defining them separately.
-    
+ 
     Uncommenting the below function would cause an error because it 
     tries to share the same template 'T' from the above function.
 */
