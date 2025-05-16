@@ -5,9 +5,9 @@
 // Templates provide a way to define functions, classes, and data structures 
 // that can work with any data type.
 
-   Templates only work with the first block (class/function/struct) 
+   /*Templates only work with the first block (class/function/struct) 
     they are defined with, hence a single template cannot be shared 
-    across multiple functions without defining them separately.
+    across multiple functions without defining them separately.*/
     
 
 /*
