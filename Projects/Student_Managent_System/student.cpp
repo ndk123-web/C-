@@ -12,8 +12,7 @@ private:
     string rollNo;
 
 public:
-
-    // this refers to currrent Student object
+    // this (->) refers to currrent Student object
     Student(string studentName, string rollNo)
     {
         this->StudentName = studentName;
@@ -48,7 +47,7 @@ public:
 int main()
 {
 
-    // All variable Declared 
+    // All variable Declared
     vector<Student> students;
     string studentName;
     string rollNo;
@@ -70,7 +69,7 @@ int main()
         cout << "5. Display All Students" << endl;
         cout << "6. Exit" << endl;
 
-        // getting admin choice 
+        // getting admin choice
         cin >> adminChoice;
 
         // switch case
@@ -164,10 +163,17 @@ int main()
 
         case 5:
         {
-            // simply displaying All Studnet Details
-            for (Student &s : students)
+            if (students.empty())
             {
-                cout << "Name : " << s.getName() << " Roll No. : " << s.getRoll() << endl;
+                cout << "No Student Found" << endl;
+            }
+            else
+            {
+                // simply displaying All Studnet Details
+                for (Student &s : students)
+                {
+                    cout << "Name : " << s.getName() << " Roll No. : " << s.getRoll() << endl;
+                }
             }
             break;
         }
@@ -176,6 +182,12 @@ int main()
         {
             cout << "Exited ...." << endl;
             return 0;
+        }
+
+        default:
+        {
+            cout << "Invalid Choice" << endl;
+            break;
         }
         }
     }
