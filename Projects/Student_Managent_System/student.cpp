@@ -12,27 +12,33 @@ private:
     string rollNo;
 
 public:
+
+    // this refers to currrent Student object
     Student(string studentName, string rollNo)
     {
         this->StudentName = studentName;
         this->rollNo = rollNo;
     }
 
+    // it's getter method
     string getName()
     {
         return this->StudentName;
     }
 
+    // it's getter method
     string getRoll()
     {
         return this->rollNo;
     }
 
+    // it's setter method
     void setName(string newStudentName)
     {
         this->StudentName = newStudentName;
     }
 
+    // it's setter method
     void setRoll(string newRollNo)
     {
         this->rollNo = newRollNo;
@@ -42,6 +48,7 @@ public:
 int main()
 {
 
+    // All variable Declared 
     vector<Student> students;
     string studentName;
     string rollNo;
@@ -52,6 +59,7 @@ int main()
     bool isFound = false;
     int adminChoice;
 
+    // Admin Panel
     while (1)
     {
         cout << "Enter Your Choice Whether What u want ?" << endl;
@@ -62,8 +70,10 @@ int main()
         cout << "5. Display All Students" << endl;
         cout << "6. Exit" << endl;
 
+        // getting admin choice 
         cin >> adminChoice;
 
+        // switch case
         switch (adminChoice)
         {
         case 1:
@@ -115,6 +125,7 @@ int main()
             cout << "Enter Student Name or Roll No. to Delete the The Student: ";
             cin >> deleteStudentOrRoll;
 
+            // auto it is iterator which is pointer holding address of student object
             for (auto it = students.begin(); it < students.end(); ++it)
             {
                 if (it->getName() == deleteStudentOrRoll || it->getRoll() == deleteStudentOrRoll)
@@ -131,6 +142,7 @@ int main()
             cout << "Enter Studnet Name or Roll No. u want to search: " << endl;
             cin >> searchStudentOrRoll;
 
+            // auto it is iterator which is pointer holding address of student object
             for (auto it = students.begin(); it < students.end(); ++it)
             {
                 if (it->getName() == searchStudentOrRoll || it->getRoll() == searchStudentOrRoll)
