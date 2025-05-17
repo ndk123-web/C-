@@ -14,6 +14,9 @@ using namespace std;
   again if we write string header then inside string header there is std namespace that adds string related function 
 
  so then we are able to use cout , string and all after writing header 
+
+ then combining iostream namespace std and string namespace std , c++ merge all function of std in one and then we are using members of that header that we included 
+
 */
 
    namespace myspace {
