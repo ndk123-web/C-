@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.conf": "nginx",
+        "*.html": "html",
+        "iostream": "cpp"
+    }
+}
